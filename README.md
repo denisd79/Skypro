@@ -1,3 +1,2 @@
-# Skypro
-automation
-Lesson 1
+## Skypro automation
+- Lesson 1
