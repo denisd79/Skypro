@@ -1,6 +1,9 @@
-def square (a, b):
-        print ("Введите число: ", a)
-        b = a
-        result = a * b
-        print("Площадь квадрата", result)
-        return result
+import math
+
+def square(side):
+    s = side * side
+    return math.ceil(s)
+
+side_length = float(input("Введите длину стороны квадрата: "))
+result = square(side_length)
+print(f"Площадь квадрата: {result}")
