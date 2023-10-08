@@ -1,20 +1,32 @@
-from turtle import *
+import turtle
 
-my_turtle = Turtle()
-my_turtle.speed(0)
-my_turtle.screen.setup(1200, 800)
+window = turtle.Screen()
+window.bgcolor('skyblue')
 
-# Нарисовать квадрат
-def draw_rect(t):
-    for x in range(0, 4):
-        t.right(90)
-        t.forward(100)
+my_turtle = turtle.Turtle()
+my_turtle.shape("turtle")
 
-# Рисует квадраты в цикле
-for x in range(0, 360):
-    draw_rect(my_turtle)
-    my_turtle.right(1)
+# Нарисуем тело рыбы
+my_turtle.color("yellow")
+my_turtle.begin_fill()
+my_turtle.circle(75)
+my_turtle.end_fill()
 
-# Необходимо, чтобы окно не закрывалось само, а только по клику
-my_turtle.screen.exitonclick()
-my_turtle.screen.mainloop()
+# Переместим черепаху в позицию под плавником
+my_turtle.penup()
+my_turtle.goto(-50, -100)
+my_turtle.pendown()
+
+# Нарисуем хвост рыбы
+my_turtle.color("yellow")
+my_turtle.begin_fill()
+my_turtle.right(150)
+my_turtle.forward(100)
+my_turtle.left(150)
+my_turtle.forward(100)
+my_turtle.left(150)
+my_turtle.forward(100)
+my_turtle.hideturtle()
+my_turtle.end_fill()
+
+turtle.done()
